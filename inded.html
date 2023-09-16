@@ -12,14 +12,19 @@
 </head>
 
 <body>
-    <div class="container w-[700px] bg-red-100 mx-auto text-center p-4">
-        <div class="calculator-input text-3xl">
+    <div class="container w-[700px] bg-red-200 mx-auto p-4 text-center">
+        <form class="calculator-form text-3xl text-center">
             <h2>Simple calculator</h2>
-            <input id="first-number" type="text" placeholder="Type here" class="input input-bordered input-sm w-[30%]" /><br>
-            <input id="second-number" type="text" placeholder="Type here" class="input input-bordered input-sm w-[30%]" /><br>
-            <button class="btn btn-sm">Calculate</button>
+            <input id="first-number" type="text" placeholder="Type here" class="input input-bordered input-sm w-[30%]" required /><br>
+            <input id="second-number" type="text" placeholder="Type here" class="input input-bordered input-sm w-[30%]" required /><br>
+            <button class=" calculate-btn btn btn-sm">Calculate</button>
+        </form>
+        <div class="calculation bg-red-100 p-3 my-4 hidden">
+            <p class="add"></p>
+            <p class="sub"></p>
+            <p class="mul"></p>
+            <p class="div"></p>
         </div>
-        <div class="calculation"></div>
     </div>
 
 
