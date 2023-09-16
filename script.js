@@ -45,6 +45,23 @@ const deleteTodo=(e)=>{
 todoForm.addEventListener('submit', addTodo);
 todoList.addEventListener('click', deleteTodo)
 
+//Simple Temperature Converter
+const temperatureForm=document.querySelector('.temperature-form');
+const celsiusInput=document.querySelector('#celsius-input');
+const temp=document.querySelector('.temp');
+const fahren=document.querySelector('.fah')
+const kelvin=document.querySelector('.kel')
 
+const convertTemp=(e)=>{
+    e.preventDefault();
+    const fah=(parseInt(celsiusInput.value)*(9/5))+32;
+    const kel=parseInt(celsiusInput.value)+273.15;
+    temp.classList.add('text-center')
+    fahren.innerHTML=`${celsiusInput.value} degree Celsius = ${fah}<span class='text-lg'>F</span>`;
+    kelvin.innerHTML=`${celsiusInput.value} degree Celsius = ${kel}<span class='text-lg'>K</span>`;
+    e.target.reset()
+}
+
+temperatureForm.addEventListener('submit', convertTemp)
 
 
