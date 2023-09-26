@@ -19,10 +19,10 @@
         <!-- Simple calculator -->
         <form class="calculator-form text-3xl text-center">
             <h2>Simple Calculator</h2>
-            <input id="first-number" type="text" placeholder="Type here" class="input input-bordered input-sm w-[30%]"
-                required /><br>
-            <input id="second-number" type="text" placeholder="Type here" class="input input-bordered input-sm w-[30%]"
-                required /><br>
+            <input id="first-number" type="text" placeholder="First number"
+                class="input input-bordered input-sm w-[30%]" required /><br>
+            <input id="second-number" type="text" placeholder="Second number"
+                class="input input-bordered input-sm w-[30%]" required /><br>
             <button class=" calculate-btn btn btn-sm capitalize">Calculate</button>
         </form>
         <div class="calculation bg-red-100 p-3 my-4 hidden text-center">
@@ -52,7 +52,18 @@
             <p class="fah"></p>
             <p class="kel"></p>
         </div>
+
+        <!-- Counter App -->
+        <div class="text-center my-4">
+            <h2 class="text-3xl text-center py-2">Simple Counter App</h2>
+            <button id="increment" class="temp-btn btn btn-sm my-2 capitalize w-[80px]">+</button>
+            <span id="counter" class="text-xl mx-3">0</span>
+            <button id="decrement" class="temp-btn btn btn-sm my-2 capitalize w-[80px]">-</button>
+        </div>
     </div>
+
+
+
 
     <!-- fetching api -->
     <div class="fetch-container my-5 bg-red-200 p-3">

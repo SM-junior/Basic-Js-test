@@ -60,8 +60,30 @@ const convertTemp = (e) => {
 }
 temperatureForm.addEventListener('submit', convertTemp)
 
-//Simple API fetching
+//Simple Counter App
+const increment = document.querySelector('#increment')
+const decrement = document.querySelector('#decrement')
+const counter = document.querySelector('#counter')
 
+let count = 0;
+const handleIncrement = () => {
+    count = count + 1;
+    counter.innerText = count
+}
+
+const handleDecrement = () => {
+    if (counter.innerText == 0) {
+        decrement.classList.add('disabled')
+    }
+    else {
+        count = count - 1;
+        counter.innerText = count
+    }
+}
+increment.addEventListener('click', handleIncrement);
+decrement.addEventListener('click', handleDecrement)
+
+//Simple API fetching
 const url = "https://jsonplaceholder.typicode.com/users?_limit=8";
 const displayUser = async () => {
     const res = await fetch(url);
