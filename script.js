@@ -1,4 +1,4 @@
-//Simple Calculator
+//////////////////Simple Calculator//////////////////
 const calculatorForm = document.querySelector('.calculator-form');
 const firstNumber = document.querySelector('#first-number');
 const secondNumber = document.querySelector('#second-number');
@@ -22,7 +22,7 @@ const calculate = (e) => {
 }
 calculatorForm.addEventListener('submit', calculate)
 
-//Simple Todo
+////////Simple Todo///////////
 const todoForm = document.querySelector('.todo-form');
 const todoInput = document.querySelector('#todo-input');
 const todoList = document.querySelector('.todo-list');
@@ -30,7 +30,7 @@ const todoList = document.querySelector('.todo-list');
 const addTodo = (e) => {
     e.preventDefault();
     const ul = document.createElement('ul');
-    ul.innerHTML += `<li class="border-solid border-2 border-indigo-600 w-[50%] mx-auto mb-2 py-1 px-3 flex justify-between">${todoInput.value} <span><i class="fa-solid fa-trash delete hover:scale-150 hover:text-red-600 hover:duration-700"></i></span></li>`
+    ul.innerHTML += `<li class="border-solid border-2 border-white w-[50%] mx-auto mb-2 py-1 px-3 flex justify-between">${todoInput.value} <span><i class="fa-solid fa-trash delete hover:scale-150 hover:text-red-600 hover:duration-700"></i></span></li>`
     todoList.appendChild(ul);
     e.target.reset();
 }
@@ -42,7 +42,7 @@ const deleteTodo = (e) => {
 todoForm.addEventListener('submit', addTodo);
 todoList.addEventListener('click', deleteTodo)
 
-//Simple Temperature Converter
+////////////Simple Temperature Converter////////////
 const temperatureForm = document.querySelector('.temperature-form');
 const celsiusInput = document.querySelector('#celsius-input');
 const temp = document.querySelector('.temp');
@@ -60,7 +60,7 @@ const convertTemp = (e) => {
 }
 temperatureForm.addEventListener('submit', convertTemp)
 
-//Simple Counter App
+/////////////////Simple Counter App/////////////////
 const increment = document.querySelector('#increment')
 const decrement = document.querySelector('#decrement')
 const counter = document.querySelector('#counter')
@@ -83,7 +83,7 @@ const handleDecrement = () => {
 increment.addEventListener('click', handleIncrement);
 decrement.addEventListener('click', handleDecrement)
 
-//Simple API fetching
+/////////////////////Simple API fetching////////////////////
 const url = "https://jsonplaceholder.typicode.com/users?_limit=8";
 const displayUser = async () => {
     const res = await fetch(url);
